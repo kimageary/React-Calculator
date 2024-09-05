@@ -1,8 +1,3 @@
-# React + Vite
+This project is a simple calculator built using React, which allows users to perform basic arithmetic operations. The project utilizes the useReducer hook to manage state and handle various actions such as adding digits, selecting operations, clearing the screen, deleting digits, and evaluating the result. The calculator supports basic functions including addition, subtraction, multiplication, and division.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The reducer function handles the state changes based on different actions like digit input, operation selection, and result evaluation. Custom components, DigitButton and OperationButton, are used to manage the buttons dynamically. This project showcases the integration of state management in React while providing a user-friendly interface for basic calculations.
