@@ -21,7 +21,7 @@ function reducer(state, {type, payload}){
   // this is the start of a switch statement that has cases that correspond
   // to each action that is associated with each button
   switch(type){
-    case ACTIONS.ADD_DIGIT:
+    case ACTIONS.ADD_DIGIT:{
       // checks to see if the overwrite flag is set to true 
       if(state.overwrite){
         // returns the state, and sets the current operand to the digit that was pushed, and sets overwrite to false
@@ -35,12 +35,11 @@ function reducer(state, {type, payload}){
       if(payload.digit === "0" && state.currentOperand === "0") return state
       // checks to see if the digit pressed is . and if the current operand is .
       if(payload.digit === "." && state.currentOperand.includes(".")) return state
-      if(payload.digit === "." && state.currentOperand ==null) return state
-      return {
+      if(payload.digit === "." && state.currentOperand == null) return {
         ...state,
-        currentOperand: `${state.currentOperand || ""}${payload.digit}`
+        currentOperand: "0."
       }
-
+    }
       // this clears everything and returns an empty state
     case ACTIONS.CLEAR:{
       return {}
